@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #036181;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* main style */
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #7395c7;
+}
+
+.main-content {
+  background-color: #7395c7;
+
+  padding: 105px, 90px, 105px, 90px;
+  margin: 10px;
+}
+
+.about {
+  margin-bottom: 40px;
+}
+
+.about-position {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.about-name {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: blod;
+  font-size: 45px;
+  line-height: 55px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.about-deskr {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 500px;
+}
+
+/* site bar */
+.Sitebar {
+  background-color: #003147;
+  padding-top: 20px;
+  min-width: 300px;
+  width: 300px;
+}
+
+/* prokekt title  */
+.titel {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.proj-item,
+.proj-braket {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.proj-list {
+  padding: 0;
+  margin-left: 15px;
+}
+
+.projects {
+  margin-bottom: 50px;
+}
+
+.project {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.proj-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  margin-left: 10px;
+}
+
+.work-pocition {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.organization {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #003147;
+}
+
+.university {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: #080808;
+}
+
+.period {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #524f4f;
+  margin-bottom: 10px;
+}
+
+.line {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.work-list {
+  padding: 0;
+  margin-left: 15px;
+}
+
+.work-list-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.photo {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.Sitebar-title {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.Contakts,
+.Tech-skils,
+.Soft-skils {
+  margin-left: 30px;
+}
+
+.Contakts {
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-bottom: 2px solid #a8a8a8;
+}
+
+.contakt-teg {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 5px;
+}
+.Contakts ul {
+  list-style: none;
+  position: relative;
+  padding-inline-start: 1px;
+}
+.textInfo {
+  color: #ffffff;
+}
+
+.contakt-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.skils-list {
+  color: #ffffff;
+  padding: 0;
+  margin-left: 20px;
+  border-bottom: 2px solid #a8a8a8;
+}
+
+.tech-list-icon {
+  color: #fb6d3a;
+}
+
+.tech-list-text {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.university {
+  color: #000000;
+}
