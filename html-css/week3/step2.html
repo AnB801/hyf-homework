@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body class="main-content">
+    <div class="leibl">
+      <div class="logo">
+        <p>Logo</p>
+      </div>
+      <div class="navbar">
+        <p>Navigation</p>
+      </div>
+      <h1>Sign up to yourcustomtailor.com</h1>
+
+      <div class="progress">
+        <h2>Step 2/4 - tell us who you are?</h2>
+        <label for="progress">Progress</label>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-green w3-center"
+            style="width: 50%"
+            id="progress"
+          >
+            50%
+          </div>
+        </div>
+      </div>
+      <p>
+        We will probably need stay in somehow. Let is know how we can reach you?
+      </p>
+      <form action="">
+        <div class="name_container">
+          <div class="navn">
+            <div class="left-navn">
+              <label for="email">Email*</label>
+              <input class="navn" required type="email" id="email" />
+              <label for="pass">Password*</label>
+              <input class="navn" required type="password" minlength="10" id="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."/>
+              <label for="repass">Re-enter Password*</label>
+              <input class="navn" required type="password" minlength="10" id="repass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+            </div>
+            <div class="right-navn">
+              <label for="phone">Phone</label>
+              <input class="navn" required type="number" id="phone" />
+            </div>
+          </div>
+        </div>
+        <p>I want to sign up for the newsletter</p>
+        <div class="r-but">
+
+            <label><strong>Weekly news</strong>
+            <input type="radio" name="gender" id="" />
+            <label><strong>Monthly news</strong>
+                <input type="radio" name="gender" id="" />
+                <label><strong>Dont send me news</strong>
+                    <input type="radio" name="gender" id="" />
+        </div>
+        <div class="step2-button">
+
+            <button class="button">Next step</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

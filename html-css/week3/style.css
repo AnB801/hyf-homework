@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  margin: auto;
+  margin-top: 200px;
+  width: 800px;
+  height: auto;
+  border: 5px;
+  background: lightblue;
+}
+.leibl {
+  width: 100%;
+  background: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.logo {
+  padding: 10px;
+  border: 1px solid black;
+}
+.navbar {
+  padding: 10px;
+  border: 1px solid black;
+  width: 300px;
+}
+
+.w3-light-grey {
+  width: 100%;
+}
+
+.name_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-container {
+  font-weight: bold;
+  margin-top: 5px;
+}
+.deskription {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.text-description span {
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.fuut1page {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.button {
+  background: greenyellow;
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  color: azure;
+  font-size: 20px;
+  text-align: center;
+}
+
+.deskription {
+  margin: 10px 0 10px 0;
+}
+.r-but {
+  display: flex;
+  justify-content: space-between;
+}
+.step2-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm {
+  display: flex;
+  justify-content: flex-end;
+}
