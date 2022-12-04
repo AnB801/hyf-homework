@@ -27,12 +27,19 @@ const Date = [
 ]
 let today = 1
 function getNewDate(dayAfter) {
-  let i = today + (dayAfter % Date.length)
+  let i = (today + dayAfter) % Date.length
   return Date[i]
 }
 console.log(getNewDate(150))
 
 // Weather wear
+// Пироверка на номер!! Когда будешь исправлять домашку обрати на єто внимание
+// function temp(teMp) {
+//   if (typeof(teMp) != Number)
+// или так пока не ясно if (typeof(teMp) != "Number") {
+//     return "Must be a number"
+//   }
+// }
 function youClothesToWear(tempr) {
   if (tempr >= 30 && tempr <= -10) {
     console.log('Don`t go there')
@@ -49,19 +56,21 @@ youClothesToWear(-12)
 const class07Students = []
 
 function addStudentToClass(studentName) {
-  addStudentToClass.length = 7
+  addStudentToClass.length = 6
   for (
     i = 0;
-    i < addStudentToClass.length && addStudentToClass.length < 7;
+    i < addStudentToClass.length && addStudentToClass.length < 6;
     i++
   ) {
-    if (studentName === 'Quine' && class07Students.length == 7) {
+    if (studentName != ' ') {
+      return 'Student name can`t be empty'
+    } else if (studentName === 'Quine' && class07Students.length == 6) {
       let removeStudent = class07Students.pop()
       class07Students.unshift()
       console.log('Dont forget add ' + `${removeStudent}` + ' to another group')
     } else if (studentName == class07Students[i]) {
       return 'Student alreadi exist'
-    } else if (class07Students.length >= 7) {
+    } else if (class07Students.length >= 6) {
       return 'A-a you can`t add  students ' + `${studentName}`
     }
     class07Students.push(studentName)
