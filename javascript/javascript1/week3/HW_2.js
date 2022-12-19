@@ -18,17 +18,8 @@ const travelInformation1 = {
   speed: 50,
   destinationDistance: 432,
 }
-function countTravelTime1(travelInformation1) {
-  const kmMin = travelInformation1.speed / 60
-  const travelTimeInMin1 = travelInformation1.destinationDistance / kmMin
-  let minutes = travelTimeInMin1 % 60
-  const hours = (travelTimeInMin1 - minutes) / 60
-  minutes = Math.round(minutes)
-  return `${hours} hours and ${minutes} minutes`
-}
-const travelTime1 = countTravelTime1(travelInformation1)
-console.log(travelTime1)
 
+console.log('Series duration of my life')
 const seriesDurations = [
   {
     title: 'Game of thrones',
@@ -74,7 +65,7 @@ function sumTotal(array) {
 
 console.log(`In total that is ${sumTotal(arr).toFixed(4)} %  of my life`)
 
-// console.log(logOutSeriesText(seriesDurations))
+console.log('Step 3: Smart-ease - Back to the basics!')
 
 const notes = []
 
@@ -84,7 +75,7 @@ function saveNote(content, id) {
 saveNote('Pick up groceries', 1)
 saveNote('Do laundry', 2)
 
-console.log(notes) // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
+console.log(notes)
 
 function getNote(id) {
   for (let i = 0; i < notes.length; i++) {
@@ -97,7 +88,7 @@ function getNote(id) {
 }
 
 const firstNote = getNote(1)
-console.log(firstNote) // {content: 'Pick up groceries', id: 1}
+console.log(firstNote)
 
 function logOutNotesFormatted() {
   notes.forEach((i) => {
@@ -107,24 +98,4 @@ function logOutNotesFormatted() {
   })
 }
 
-logOutNotesFormatted() // should log out the text below
-
-//   CactusIO-interactive (Smart phone usage app)
-
-// addActivity("23/7-18", "Youtube", 30);
-
-// function addActivity (date, activity, duration) {
-//     // date = Date.parse()
-//     date = date.toString()
-//     activity = activity.toString()
-//     duration = duration.Number()
-// }
-
-/*
-activities should now look like this
-[{
-    date: '23/7-18',
-    activity: 'Youtube',
-    duration: 30,
-}]
-*/
+logOutNotesFormatted()
