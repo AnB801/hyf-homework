@@ -2,11 +2,11 @@
 
 function getFullname(firstname, surname, userFormatName, sex) {
   if (userFormatName == true && sex == 'male') {
-    console.log('Lord ' + firstname + ' ' + surname)
+    return 'Lord ' + firstname + ' ' + surname
   } else if (userFormatName == true && sex == 'female') {
-    console.log('Ledi ' + firstname + ' ' + surname)
+    return 'Ledi ' + firstname + ' ' + surname
   } else {
-    console.log(firstname + ' ' + surname)
+    return firstname + ' ' + surname
   }
 }
 
@@ -32,14 +32,6 @@ function getNewDate(dayAfter) {
 }
 console.log(getNewDate(150))
 
-// Weather wear
-// Пироверка на номер!! Когда будешь исправлять домашку обрати на єто внимание
-// function temp(teMp) {
-//   if (typeof(teMp) != Number)
-// или так пока не ясно if (typeof(teMp) != "Number") {
-//     return "Must be a number"
-//   }
-// }
 function youClothesToWear(tempr) {
   if (tempr >= 30 && tempr <= -10) {
     console.log('Don`t go there')
@@ -52,6 +44,7 @@ function youClothesToWear(tempr) {
   }
 }
 youClothesToWear(-12)
+
 // Student manager
 const class07Students = []
 
@@ -62,18 +55,17 @@ function addStudentToClass(studentName) {
     i < addStudentToClass.length && addStudentToClass.length < 6;
     i++
   ) {
-    if (studentName != ' ') {
+    if (studentName === ' ') {
       return 'Student name can`t be empty'
-    } else if (studentName === 'Quine' && class07Students.length == 6) {
-      let removeStudent = class07Students.pop()
-      class07Students.unshift()
-      console.log('Dont forget add ' + `${removeStudent}` + ' to another group')
-    } else if (studentName == class07Students[i]) {
-      return 'Student alreadi exist'
+    } else if (studentName === 'Quine' && class07Students.length >= 6) {
+      class07Students.push(studentName)
+    } else if (class07Students.includes(studentName) !== true) {
+      if (class07Students.length < 6) {
+        class07Students.push(studentName)
+      }
     } else if (class07Students.length >= 6) {
       return 'A-a you can`t add  students ' + `${studentName}`
     }
-    class07Students.push(studentName)
   }
 }
 addStudentToClass('Anton')
@@ -91,15 +83,47 @@ console.log(class07Students)
 function getNumberOfStudents() {
   console.log('There are ' + class07Students.length + ' studets in class 07')
 }
-getNumberOfStudents()
+console.log(getNumberOfStudents())
 
-// //Candy helper
-// function addCandy(candyType, weight) {
-//   candyType = 'sweet' || 'chocolate' || 'toffee' || 'chewing-gum'
-//   weight = Number
-// }
+//Candy helper
 
-// let amountToSpend = Math.random() * 100
+const boughtCandyPrices = []
+//   candyType = 'sweet' 0.5 || 'chocolate' 0.7 || 'toffee' 1.1  || 'chewing-gum' 0.03
+function addCandy(candyType, weight) {
+  let cost = 0
+  if (candyType === 'sweet') {
+    cost = weight * 0.5
+    boughtCandyPrices.push(cost)
+  } else if (candyType === 'chocolate') {
+    cost = weight * 0.7
+    boughtCandyPrices.push(cost)
+  } else if (candyType === 'toffee') {
+    cost = weight * 1.1
+    boughtCandyPrices.push(cost)
+  } else if (candyType === 'chewing-gum') {
+    cost = weight * 0.03
+    boughtCandyPrices.push(cost)
+  }
+}
+addCandy('sweet', 10)
+addCandy('chocolate', 10)
+addCandy('toffee', 10)
+addCandy('chewing-gum', 10)
+const totalPrice = boughtCandyPrices.map((i) => (x += i), (x = 0)).reverse()[0]
+console.log(totalPrice)
 
-// function canBuyMoreCandy() {}
-// boughtCandy
+let amountToSpend = Math.random() * 100
+//  function canBuyMoreCandy() {}
+function canBuyMoreCandy(candiesBought, amountToSpend) {
+  let sum = 0
+  for (i = 0; i < candiesBought.length; i++) {
+    sum += candiesBought[i]
+  }
+  if (sum < amountToSpend) {
+    console.log('You can buy more, so please do!')
+  } else {
+    console.log('Enough candy for you!')
+  }
+}
+
+canBuyMoreCandy(boughtCandyPrices, amountToSpend)
