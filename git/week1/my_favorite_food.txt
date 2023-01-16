@@ -1,7 +1,4 @@
-
 Recipe: Annie’s Red Planet IPA
-
-All Access Subscribers can download the Beersmith and BeerXML version of this recipe. Subscribe today.
 
 PARTIAL-MASH
 
@@ -26,7 +23,16 @@ YEAST
 Chico, Nottingham, or similar clean-fermenting, high-flocculation ale strain
 
 DIRECTIONS
-Mill the grains and steep in 1 gallon (3.8 liters) of 152°F (67°C) water for 30 minutes, then raise to 168°F (76°C). Rinse steeping bag, add 6 gallons (23 liters) of water, and bring to a boil. Switch off the heat and add the malt extract in batches, stirring frequently to dissolve and avoid scorching. Boil for 55 minutes, adding hops according to the schedule. After the boil, do a whirlpool step: Stir for 5 minutes to create a vortex, add the whirlpool hops, and steep for 30 minutes. Chill the wort to 65°F (18°C), aerate well, and pitch the yeast. Ferment at about 68°F (20°C). On Day 4 of fermentation, add the dry hops. Allow the beer to ferment for 6 more days, or until fermentation is complete and gravity has stabilized. Crash, package, carbonate, and enjoy.
+Mill the grains and steep in 1 gallon (3.8 liters) of 152°F (67°C) water for 30 minutes, then raise to 168°F (76°C). 
+Rinse steeping bag, add 6 gallons (23 liters) of water, and bring to a boil. 
+Switch off the heat and add the malt extract in batches, stirring frequently to dissolve and avoid scorching. 
+Boil for 55 minutes, adding hops according to the schedule.
+ After the boil, do a whirlpool step: Stir for 5 minutes to create a vortex, add the whirlpool hops, and steep for 30 minutes.
+  Chill the wort to 65°F (18°C), aerate well, and pitch the yeast. Ferment at about 68°F (20°C). On Day 4 of fermentation, 
+  add the dry hops. Allow the beer to ferment for 6 more days, or until fermentation is complete and gravity has stabilized. 
+  Crash, package, carbonate, and enjoy.
 
 ALL-GRAIN VERSION
-In place of the DME, substitute 8.8 lb (4 kg) two-row pale malt. Mill the grains and mash at 152°F (67°C) for 60 minutes. Recirculate until the runnings are clear, then run off into the kettle. Sparge and top up as necessary to get about 6 gallons (23 liters) of wort. Boil for 60 minutes, continuing as above.
+In place of the DME, substitute 8.8 lb (4 kg) two-row pale malt. Mill the grains and mash at 152°F (67°C) for 60 minutes.
+ Recirculate until the runnings are clear, then run off into the kettle. Sparge and top up as necessary to get about 6
+  gallons (23 liters) of wort. Boil for 60 minutes, continuing as above.
