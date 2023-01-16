@@ -17,7 +17,7 @@ const dogYearOfBirth = 2015
 const dogYearFuture = 2027
 const dogYear = dogYearFuture - dogYearOfBirth
 
-var shouldShowResultInDogYears = new Boolean(false)
+const shouldShowResultInDogYears = false
 if (shouldShowResultInDogYears) {
   console.log(
     'Your dog will be ' + dogYear * 7 + ' dog years old in ' + dogYearFuture
@@ -83,7 +83,7 @@ const firstWords = [
   'Iran',
   'Spain',
 ]
-var randomNumber1 = Math.floor(Math.random() * firstWords.length)
+const randomNumber1 = Math.floor(Math.random() * firstWords.length)
 
 const secondWords = [
   'Cameroon',
@@ -98,9 +98,10 @@ const secondWords = [
   'France',
 ]
 
-var randomNumber2 = Math.floor(Math.random() * secondWords.length)
+const randomNumber2 = Math.floor(Math.random() * secondWords.length)
 
-let a = firstWords[randomNumber1].length + secondWords[randomNumber2].length + 1
+const randomWorldLenght =
+  firstWords[randomNumber1].length + secondWords[randomNumber2].length + 1
 
 console.log(
   'The startup: ' +
