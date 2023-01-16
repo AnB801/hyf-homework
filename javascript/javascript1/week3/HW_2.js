@@ -1,3 +1,21 @@
+// 1. Item array removal
+const names = [
+  'Peter',
+  'Ahmad',
+  'Yana',
+  'kristina',
+  'Rasmus',
+  'Samuel',
+  'katrine',
+  'Tala',
+]
+const nameToRemove = 'Ahmad'
+let name1 = names
+name1 = name1.filter((i) => i != nameToRemove)
+console.log(name1) // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
+
+// 2.When will we be there??
+
 console.log('When will we be there??')
 const travelInformation = {
   speed: 100,
@@ -6,7 +24,7 @@ const travelInformation = {
 
 function counterTravelTime(object) {
   const reminder = object.destinationDistance % object.speed
-  const minutes = Math.round((reminder * 60) / object.speed)
+  const minutes = Math.floor((reminder * 60) / object.speed)
   const hours = (object.destinationDistance - reminder) / object.speed
   return `${hours} hours and ${minutes} minutes `
 }
@@ -14,10 +32,7 @@ function counterTravelTime(object) {
 const travelTime = counterTravelTime(travelInformation)
 console.log(travelTime) // 8 hours and 38 minutes
 
-const travelInformation1 = {
-  speed: 50,
-  destinationDistance: 432,
-}
+// 2.1.Series duration of my life
 
 console.log('Series duration of my life')
 const seriesDurations = [
@@ -52,9 +67,7 @@ function logOutSeriesText() {
     arr.push(timeOfLife)
   })
 }
-
 logOutSeriesText()
-
 function sumTotal(array) {
   let sum = 0
   for (let i = 0; i < array.length; i++) {
@@ -62,11 +75,11 @@ function sumTotal(array) {
   }
   return sum
 }
-
 console.log(`In total that is ${sumTotal(arr).toFixed(4)} %  of my life`)
 
-console.log('Step 3: Smart-ease - Back to the basics!')
+// 3.Smart-ease - Back to the basics!
 
+console.log('Step 3: Smart-ease - Back to the basics!')
 const notes = []
 
 function saveNote(content, id) {
@@ -79,7 +92,7 @@ console.log(notes)
 
 function getNote(id) {
   for (let i = 0; i < notes.length; i++) {
-    if (id == notes[i].id) {
+    if (id === notes[i].id) {
       return notes[i]
     } else if (id === null || isNaN(id)) {
       return `Error line`
@@ -90,6 +103,8 @@ function getNote(id) {
 const firstNote = getNote(1)
 console.log(firstNote)
 
+// 3.1 Log out notes
+
 function logOutNotesFormatted() {
   notes.forEach((i) => {
     console.log(
@@ -99,3 +114,36 @@ function logOutNotesFormatted() {
 }
 
 logOutNotesFormatted()
+
+// 4.CactusIO-interactive (Smart phone usage app) optional
+// 4.1 Adding an activity
+const activities = []
+function addActivity(date, activity, durations) {
+  activ = {
+    date: date,
+    activity: activity,
+    durations: durations,
+  }
+  activities.push(activ)
+}
+
+addActivity('23/7-18', 'Youtube', 30)
+addActivity('23/7-18', 'Youtube', 30)
+addActivity('23/7-18', 'Youtube', 30)
+console.log(activities)
+
+// 4.2 Show my status
+let limitToTelefon = 100
+function showStatus(arr, lim) {
+  let totalDur = 0
+  if (arr.length > 0) {
+    for (let i = 0; i < arr.length; i++) {
+      totalDur += arr[i].durations
+    }
+    console.log(
+      `You have added ${arr.length} activities. They amount to ${totalDur} min. of usage`
+    )
+  } else if (lim < limitToTelefon) console.log(`No more telefons!`)
+}
+
+showStatus(activities)
