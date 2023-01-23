@@ -1,0 +1,22 @@
+const OrderName = 'First order'
+console.log(OrderName)
+
+let JasonStr = JSON.stringify(OrderName)
+console.log(JasonStr)
+
+let v = JSON.parse(JasonStr)
+console.log(v)
+
+let OrderId = 1
+let Price = 100
+let ListOfDrinks = {
+  cola: 1,
+  viski: 0.5,
+}
+let OrderExtras = {
+  ice: 2,
+}
+
+
+const jsonStr = "{" OrderName": "First order", { "OrderId" : 1, {"cola":1,"viski":0.5}}, "Extras": [{ice: 2}]}}" 
+
