@@ -10,12 +10,20 @@
   <body>
     <h1>Faster presser</h1>
     <div class="container">
-      <input type="number" name="" id="" placeholder="Set seconds" />
-      <button id="start">Start game!</button>
+      <input type="number" name="" id="timeOfGame" placeholder="Set seconds" />
+      <button id="start_button">Start game!</button>
+      <div class="info-container"><p id="info"></p></div>
     </div>
     <div class="game-filde">
-      <div class="left">Press S</div>
-      <div class="right">Press L</div>
+      <div class="left" id="left_Fild">
+        Press S
+        <p id="sF"></p>
+      </div>
+
+      <div class="right" id="right_Fild">
+        Press L
+        <p id="lF"></p>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
