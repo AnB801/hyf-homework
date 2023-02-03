@@ -1,32 +1,31 @@
 //html
-const buttonStart = document.querySelector('start_button')
-const leftFild = document.getElementById('left_Fild')
-const rightFild = document.getElementById('right_Filg')
+const buttonStart = document.querySelector('start-button')
+const leftFild = document.getElementById('left-fild')
+const rightFild = document.getElementById('right-fild')
 
 const inputField = document.getElementById('timeOfGame')
 const infoField = document.querySelector('#info')
 
-const startButton = document.querySelector('#start')
-const pressL = document.querySelector('#lF')
-const pressS = document.querySelector('#sF')
+const startButton = document.querySelector('#start-button')
+const pressL = document.querySelector('#l')
+const pressS = document.querySelector('#s')
 
 //count
 let countL = 0
 let countS = 0
 
 const keyUpListener = function (event) {
-  if (event.key() === 'sF') {
+  if (event.key.toLowerCase() === 's') {
     countS++
     pressS.innerHTML = countS
     infoField.innerHTML = ''
-  } else if (event.key() === 'lF') {
+  } else if (event.key.toLowerCase() === 'l') {
     countL++
     pressL.innerHTML = countL
     infoField.innerHTML = ''
+  } else {
+    infoField.innerHTML = 'Press either S or L'
   }
-  //   } else {
-  //     infoField.innerHTML = 'Press either S or L'
-  //   }
 }
 
 startButton.onclick = function (event) {
