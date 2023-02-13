@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Currency calculator</title>
+  </head>
+  <body>
+    <div>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" min="0" />
+    </div>
+    <div>
+      <label for="currency-from">From:</label>
+      <select id="currency-from"></select>
+    </div>
+    <div>
+      <label for="currency-to">To:</label>
+      <select id="currency-to"></select>
+    </div>
+    <label for="currency-get">You get:</label>
+    <div id="result"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
