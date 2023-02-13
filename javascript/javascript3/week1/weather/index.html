@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <input type="text" placeholder="Enter city" />
-    <button class="search">Search</button>
-    <button class="currentPosition">Current Position</button>
-    <ul></ul>
+    <div id="weather-app">
+      <form>
+        <input type="text" id="city-input" placeholder="Enter a Сity name" />
+        <button type="submit" id="submit-button">Get Weather</button>
+        <button id="get-location-button">Get My Location</button>
+      </form>
+      <div id="loading-text">Loading...</div>
+      <div id="weather-data">
+        <h2 id="city"></h2>
+        <p id="temperature"></p>
+        <img id="icon" />
+        <p id="wind-speed"></p>
+        <p id="cloudiness"></p>
+        <p id="sunrise"></p>
+        <p id="sunset"></p>
+        <div id="map"></div>
+      </div>
+      
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
