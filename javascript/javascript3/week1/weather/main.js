@@ -106,3 +106,23 @@ const marker = new google.maps.Marker({
   position: { lat: latitude, lng: longitude },
   map: map,
 })
+
+// .. Flag. Doesn't work yet
+// submitButton.addEventListener('click', () => {
+//   const city = cityInput.value
+//   fetchCountryInfo(city)
+// })
+
+// async function fetchCountryInfo(city) {
+//   const response = await fetch(`https://restcountries.com/v2/capital/${city}`)
+//   const data = await response.json()
+
+//   // if (data.length === 0) {
+//   //   // Handle case where city is not found
+//   //   console.error(`City ${city} not found.`)
+//   //   return
+//   // }
+
+//   const flagUrl = data[0].flag
+//   document.body.style.backgroundImage = `url(${flagUrl})`
+// }

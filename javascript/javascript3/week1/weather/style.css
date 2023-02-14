@@ -6,6 +6,12 @@ body {
   margin: 200px;
   padding: 50px;
 }
+.container {
+  height: 1000px;
+  width: 500px;
+  border: 2mm, #0e0303;
+  display: block;
+}
 
 .weather-app {
   max-width: 600px;
