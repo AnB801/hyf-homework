@@ -87,3 +87,49 @@ insert into task (id, title, description, created, updated, due_date, status_id,
 insert into task (id, title, description, created, updated, due_date, status_id, user_id) values (34, 'Buy plane ticket to Auckland', 'Check prices online first!', '2017-09-05 09:07:22', '2017-10-15 09:36:06', '2017-12-07 11:10:05', 1, 9);
 insert into task (id, title, description, created, updated, due_date, status_id, user_id) values (35, 'Learn about NoSQL databases', 'MongoDB, CouchDB, etc.', '2017-10-20 01:41:53', '2017-10-04 07:19:56', '2017-12-23 10:13:42', 2, NULL);
 
+
+--HOMEWORK
+
+-- Select the names and phones of all users;
+SELECT name, phone FROM user;
+
+-- Select the name of the user with id=10;
+SELECT name FROM user
+WHERE id=10;
+
+-- Find how many users exist in the database;
+SELECT count(*) FROM user;
+
+-- Select the names of the first 5 users in the database;
+SELECT name FROM user LIMIT 5;
+
+-- Select the names of the last 3 users in the database;
+SELECT name FROM user ORDER BY name DESC LIMIT 3;
+
+-- Sum all the ids in the user table;
+SELECT SUM(id) FROM user;
+
+-- Select all users and order them alphabetically by name;
+SELECT * FROM user ORDER BY name ASC;
+
+-- Find all tasks that include SQL either on the title or on the description;
+SELECT title FROM task 
+WHERE title LIKE '%SQL%' OR description LIKE '%SQL%';
+
+-- Find the title of all tasks that the user Maryrose is responsible for;
+SELECT * FROM task;
+SELECT * FROM user;
+
+SELECT task.title, user.id
+FROM  task INNER JOIN user ON task.user_id = user.id
+WHERE user.name LIKE '%Maryrose%';
+
+-- Find how many tasks each user is responsible for;
+-- !!!This query doesn't work even though I think I wrote it correctly !!!
+SELECT user.name, COUNT(*) AS task_count
+FROM  task JOIN user ON task.user_id = user.id;
+
+-- Find how many tasks with a status=Done each user is responsible for;
+SELECT COUNT(*) AS task_count
+FROM  task JOIN status ON task.status_id = status.id
+WHERE status.id = '3';
