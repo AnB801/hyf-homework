@@ -127,7 +127,7 @@ WHERE user.name LIKE '%Maryrose%';
 -- Find how many tasks each user is responsible for;
 -- !!!This query doesn't work even though I think I wrote it correctly !!!
 SELECT user.name, COUNT(*) AS task_count
-FROM  task JOIN user ON task.user_id = user.id;
+FROM  task JOIN user ON task.user_id = user.id GROUP BY user.id;
 
 -- Find how many tasks with a status=Done each user is responsible for;
 SELECT COUNT(*) AS task_count
