@@ -102,7 +102,7 @@ SELECT name FROM user
 WHERE id=10;
 
 -- Find how many users exist in the database;
-SELECT count(*) FROM user;
+SELECT COUNT(*) FROM user;
 
 -- Select the names of the first 5 users in the database;
 SELECT name FROM user ORDER BY id ASC LIMIT 5;
@@ -121,14 +121,13 @@ SELECT title FROM task
 WHERE title LIKE '%SQL%' OR description LIKE '%SQL%';
 
 -- Find the title of all tasks that the user Maryrose is responsible for;
-use HYFmySQL;
+
 SELECT task.title, user.id
 FROM  task JOIN user ON task.user_id = user.id
 WHERE user.name LIKE '%Maryrose%';
 
 -- Find how many tasks each user is responsible for;
 
-use HYFmySQL;
 SELECT user.name, COUNT(*) AS task_count
 FROM  task JOIN user ON task.user_id = user.id GROUP BY user.id;
 
