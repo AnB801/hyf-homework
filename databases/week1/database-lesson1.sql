@@ -1,6 +1,10 @@
 SET NAMES utf8mb4;
+show databases;
+--CREATE DATABASE HYFmySQL;
+--use  DATABASE HYFmySQL;
+show databases;
 
-CREATE TABLE user (
+CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -101,7 +105,7 @@ WHERE id=10;
 SELECT count(*) FROM user;
 
 -- Select the names of the first 5 users in the database;
-SELECT name FROM user LIMIT 5;
+SELECT name FROM user ORDER BY id ASC LIMIT 5;
 
 -- Select the names of the last 3 users in the database;
 SELECT name FROM user ORDER BY name DESC LIMIT 3;
@@ -117,19 +121,22 @@ SELECT title FROM task
 WHERE title LIKE '%SQL%' OR description LIKE '%SQL%';
 
 -- Find the title of all tasks that the user Maryrose is responsible for;
-SELECT * FROM task;
-SELECT * FROM user;
-
+use HYFmySQL;
 SELECT task.title, user.id
-FROM  task INNER JOIN user ON task.user_id = user.id
+FROM  task JOIN user ON task.user_id = user.id
 WHERE user.name LIKE '%Maryrose%';
 
 -- Find how many tasks each user is responsible for;
--- !!!This query doesn't work even though I think I wrote it correctly !!!
+
+use HYFmySQL;
 SELECT user.name, COUNT(*) AS task_count
 FROM  task JOIN user ON task.user_id = user.id GROUP BY user.id;
 
 -- Find how many tasks with a status=Done each user is responsible for;
-SELECT COUNT(*) AS task_count
-FROM  task JOIN status ON task.status_id = status.id
-WHERE status.id = '3';
+
+use HYFmySQL;
+SELECT task.user_id, COUNT(*) AS task_count
+FROM task
+JOIN status ON task.status_id = status.id
+WHERE status.id = '3'
+GROUP BY task.user_id;
