@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type='text'] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#screenshot-container {
+  display: none;
+}
+
+#save-screenshot-button {
+  display: none;
+}
