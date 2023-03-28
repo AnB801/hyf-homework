@@ -2,9 +2,12 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 const fs = require('fs')
+const mealsRouter = require('./api/meals')
+const reservationsRouter = require('./api/reservations')
 
-// Support parsing JSON requests
 app.use(express.json())
+app.use('/api/meals', mealsRouter)
+app.use('/api/reservations', reservationsRouter)
 
 app.get('/', (req, res) => {
   res.send(' go go go ')
@@ -40,7 +43,7 @@ app.post('/search', (req, res) => {
   const documents = JSON.parse(fs.readFileSync('documents.json'))
 
   if (q && fields) {
-    res.status(400).send('There is no such thing, enter it correctly .')
+    res.status(400).send('Camon, lets pay more attention ')
     return
   }
 
