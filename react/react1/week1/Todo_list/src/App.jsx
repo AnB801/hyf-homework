@@ -21,11 +21,11 @@ const App = () => {
   )
 }
 
-const TodoItem = ({ description, when }) => {
+const TodoItem = ({ id, description, when }) => {
   return (
     <div>
       <p>
-        * {description}, {when}
+        *{id} {description}, {when}
       </p>
     </div>
   )
