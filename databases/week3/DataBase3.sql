@@ -59,16 +59,16 @@ VALUES ('BOrsh', NULL, NULL, NULL, 5, 1500.15, "2022-03-05");
 
 -- Get a meal with any id, fx 1
 SELECT * FROM Meal 
-Where id = 1;
+WHERE id = 1;
 
 -- Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
 UPDATE Meal
 SET description_meal = "НЕ Пісний борщ з часниковими пампушками" , price = 350.98
-Where id =2 ;
+WHERE id =2 ;
 
 -- Delete a meal with any id, fx 1
 DELETE FROM Meal
-Where id =1;
+WHERE id =1;
 
 
 -- Get all reservations
@@ -86,16 +86,16 @@ VALUES ( 4, 2, "2023-05-01", "55659+", "LOO", NULL);
 
 -- Get a reservation with any id, fx 1
 SELECT * FROM Reservation
-Where id = 3;
+WHERE id = 3;
 
 -- Update a reservation with any id, fx 1. Update any attribute fx the title or multiple attributes
 UPDATE Reservation
 SET number_of_guests = 100 , contact_email = "100@gmail.com"
-Where id =3 ;
+WHERE id =3 ;
 
 -- Delete a reservation with any id, fx 1
 DELETE FROM Reservation
-Where id =1;
+WHERE id =1;
 
 
 -- Get all reviews
@@ -111,24 +111,24 @@ VALUES ("Good Good", "Tasty, very", 1,4, "2023-01-02" );
 
 -- Get a review with any id, fx 1
 SELECT * FROM Review
-Where id = 2;
+WHERE id = 2;
 -- Update a review with any id, fx 1. Update any attribute fx the title or multiple attributes
 UPDATE Review 
 SET title = "BEST"
-Where id =2;
+WHERE id =2;
 -- Delete a review with any id, fx 1
 DELETE FROM Review
-Where id =1;
+WHERE id =1;
 
 -- Get meals that has a price smaller than a specific price fx 90
 SELECT * FROM Meal
-Where price < 90;
+WHERE price < 90;
 -- Get meals that still has available reservations
    --it's not clear what you want from me 
 
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * FROM Meal
-WHERE meal_title LIKE "%sRød grød med%";
+WHERE meal_title LIKE "%Rød grød med%";
 
 -- Get meals that has been created between two dates
 SELECT * FROM Meal
