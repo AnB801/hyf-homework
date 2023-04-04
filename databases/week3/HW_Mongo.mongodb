@@ -1,0 +1,133 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'DB_mongo';
+// const collection = 'Meal';
+
+// Create a new database.
+use(database);
+
+// Create a new collection.
+db.createCollection(collection);
+
+// The prototype form to create a regular collection:
+db.createCollection( <Meal>,
+  {
+    id: <number>,
+    title: <string>,
+    description_meal : <string>,
+    location_meal : <string>,
+    when_created: <string>,
+    max_reservations: <number>,
+    price: <number>,
+    created_date: <string>
+      }
+) 
+ 
+db.createCollection( <Reservation>,
+  {
+    id: <number>,
+    number_of_guests: <number>,
+    meal_id: <number>,
+    created_date:  <string>,
+    contact_phonenumber : <string>,
+    contact_name: <string>,
+    contact_email: <string>
+    
+      }
+) 
+
+db.createCollection( <Review>,
+  {
+    id: <number>,
+    title: <string>,
+    description_reviev: <string>,
+    meal_id: <number>,
+    stars: <number>,
+    created_date:  <string>,
+    contact_phonenumber : <string>,
+    contact_name: <string>,
+    contact_email: <string>
+    
+      }
+) 
+
+
+
+
+// The prototype form to create a time-series collection:
+/* db.createCollection( <name>,
+  {
+    timeseries: {
+      timeField: <string>,
+      metaField: <string>,
+      granuarity: <string>
+    },
+    expireAfterSeconds: <number>
+  }
+) */
+
+
+db.Meal.insertMany([
+        {
+            "_id": 1,
+    "title": 'Пряний курячий суп зі стегном з мангала',
+    "description_meal" :'Насичений, пряний бульйон з гречаною локшиною, маринованним яйцем та грильованою куркою",
+    "location_meal" : "Ukraine",
+    "when_created": "2023-01-01",
+    "max_reservations": 2,
+    "price": 90.99,
+    "created_date": "2023-01-02"
+      },
+
+    {
+             "_id": 2,
+    "title": "Козацький ланч",
+    "description_meal" :"Пісний борщ з часниковими пампушками та пиріг пастуха з томленою свининою. Подаємо з салатом із ферментованих овочів.",
+    "location_meal" : "Japan",
+    "when_created": "2023-01-01",
+    "max_reservations": 1,
+    "price": 190.99,
+    "created_date": "2023-02-04"
+      }, 
+
+    {
+             "_id": 3,
+    "title": "Rød grød med fløde",
+    "description_meal" :"4 Келихи пива.",
+    "location_meal" : "Danmark",
+    "when_created": "2023-11-01",
+    "max_reservations": 2,
+    "price": 200,
+    "created_date": "2023-03-05"
+      }
+    
+]);
+
+// Get all meals
+db.Meal.find()
+// Add a new meal
+db.Meal.insertOne(
+    [
+      {
+             "_id": 4,
+    "title": "Rød ",
+    "description_meal" :"50 Келихи пива.",
+    "location_meal" : "Poland",
+    "when_created": "2023-03-05",
+    "max_reservations": 2,
+    "price": 200,
+    "created_date": "2023-03-05"
+      }  
+    ]
+)
+// Get a meal with any id, fx 1
+db.Meal.find({id = 1})
+
+// Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
+db.Meal.updateOne({id  = 4}, {$set: {title: "Gost Town"}})
+
+// Delete a meal with any id, fx 1
+db.Meal.deleteOne({id = 3})
+
+// but for some reason does not search, does not delete and does not update ((
