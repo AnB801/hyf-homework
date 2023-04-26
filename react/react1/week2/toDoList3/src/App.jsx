@@ -11,13 +11,6 @@ function Todo({ todo, toggleDone, deleteTodo }) {
         checked={todo.done}
         onChange={() => toggleDone(todo.id)}
       />
-      {/* <span
-        style={{
-          textDecoration: todo.done ? 'line-through' : 'none',
-        }}
-      >
-        {todo.description}
-      </span> */}
       <button className="delete" onClick={() => deleteTodo(todo.id)}>
         Delete
       </button>
