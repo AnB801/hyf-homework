@@ -1,25 +1,45 @@
-import { useState } from 'react'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+
 import './App.css'
 import todos from './todos'
 
-class App extends Component {
-  state = {
-    todos: [],
-    timeSpent: 0,
-  }
+function Todo({ todo, toggleDone, deleteTodo }) {
+  return (
+    <li>
+      <input
+        type="checkbox"
+        checked={todo.done}
+        onChange={() => toggleDone(todo.id)}
+      />
+      {/* <span
+        style={{
+          textDecoration: todo.done ? 'line-through' : 'none',
+        }}
+      >
+        {todo.description}
+      </span> */}
+      <button className="delete" onClick={() => deleteTodo(todo.id)}>
+        Delete
+      </button>
+    </li>
+  )
+}
 
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.setState((prevState) => ({ timeSpent: prevState.timeSpent + 1 }))
+export function App(props) {
+  const [todosState, setTodosState] = useState([])
+  const [timeSpent, setTimeSpent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeSpent((prevTimeSpent) => prevTimeSpent + 1)
     }, 1000)
-  }
 
-  componentWillUnmount() {
-    clearInterval(this.timer)
-  }
+    return () => {
+      clearInterval(timer)
+    }
+  }, [])
 
-  addRandomTodo = () => {
+  const addRandomTodo = () => {
     const existingTodoProbability = 0.5
     const randomNumber = Math.random()
 
@@ -39,64 +59,42 @@ class App extends Component {
       }
     }
 
-    this.setState((prevState) => ({ todos: [...prevState.todos, randomTodo] }))
+    setTodosState((prevState) => [...prevState, randomTodo])
   }
 
-  toggleDone = (id) => {
-    this.setState((prevState) => ({
-      todos: prevState.todos.map((todo) =>
+  const toggleDone = (id) => {
+    setTodosState((prevState) =>
+      prevState.map((todo) =>
         todo.id === id ? { ...todo, done: !todo.done } : todo
-      ),
-    }))
-  }
-
-  deleteTodo = (id) => {
-    this.setState((prevState) => ({
-      todos: prevState.todos.filter((todo) => todo.id !== id),
-    }))
-  }
-
-  render() {
-    const { todos, timeSpent } = this.state
-
-    return (
-      <div className="App">
-        <h1>Todo List</h1>
-        <button className="add-random" onClick={this.addRandomTodo}>
-          Add random todo
-        </button>
-        {todos.length === 0 ? (
-          <p>No items...</p>
-        ) : (
-          <ul>
-            {todos.map((todo) => (
-              <li key={todo.id}>
-                <input
-                  type="checkbox"
-                  checked={todo.done}
-                  onChange={() => this.toggleDone(todo.id)}
-                />
-                <span
-                  style={{
-                    textDecoration: todo.done ? 'line-through' : 'none',
-                  }}
-                >
-                  {todo.description}
-                </span>
-                <button
-                  className="delete"
-                  onClick={() => this.deleteTodo(todo.id)}
-                >
-                  Delete
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-        <p>Time spent on the website: {timeSpent} seconds</p>
-      </div>
+      )
     )
   }
-}
 
-export default App
+  const deleteTodo = (id) => {
+    setTodosState((prevState) => prevState.filter((todo) => todo.id !== id))
+  }
+
+  return (
+    <div className="App">
+      <h1>Todo List</h1>
+      <button className="add-random" onClick={addRandomTodo}>
+        Add random todo
+      </button>
+      {todosState.length === 0 ? (
+        <p>No items...</p>
+      ) : (
+        <ul>
+          {todosState.map((todo) => (
+            <Todo
+              key={todo.id}
+              todo={todo}
+              toggleDone={toggleDone}
+              deleteTodo={deleteTodo}
+            />
+          ))}
+        </ul>
+      )}
+      <p>Time spent on the website: {timeSpent} seconds</p>
+    </div>
+  )
+}
