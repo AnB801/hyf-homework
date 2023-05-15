@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #f4f4f4;
+  border: 2px solid rgb(17, 255, 0);
+}
+
+.header {
+  text-align: center;
+  color: #333;
+}
+
+.search-input {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.user-list-item {
+  margin: 0.5rem 0;
+}
