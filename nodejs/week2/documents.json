@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "name": "Borscht",
+    "ingredients": "beetroot, cabbage, potatoes, carrots, onions, garlic, tomato paste, meat",
+    "origin": "Ukraine"
+  },
+  {
+    "id": 2,
+    "name": "Hummus",
+    "ingredients": "chickpeas, tahini, garlic, lemon juice, olive oil",
+    "origin": "Middle Eastern"
+  },
+  {
+    "id": 3,
+    "name": "Shawarma",
+    "ingredients": "marinated meat, pita bread, vegetables, garlic sauce",
+    "origin": "Arab"
+  },
+  {
+    "id": 4,
+    "name": "Smørrebrød",
+    "ingredients": "rye bread, butter, cold cuts, cheese, spreads, vegetables",
+    "origin": "Denmark"
+  },
+  {
+    "id": 5,
+    "name": "Paella",
+    "ingredients": "rice, saffron, chicken, rabbit, green beans, vegetables, olive oil",
+    "origin": "Spain"
+  },
+  {
+    "id": 6,
+    "name": "Jollof Rice",
+    "ingredients": "rice, tomatoes, onions, bell peppers, spices, meat",
+    "origin": "West Africa"
+  },
+  {
+    "id": 7,
+    "name": "Baklava",
+    "ingredients": "filo pastry, chopped nuts, sugar, honey, cinnamon",
+    "origin": "Middle Eastern"
+  },
+  {
+    "id": 8,
+    "name": "Moussaka",
+    "ingredients": "eggplant, minced meat, potatoes, bechamel sauce, tomatoes",
+    "origin": "Greece"
+  },
+  {
+    "id": 9,
+    "name": "Falafel",
+    "ingredients": "chickpeas, fava beans, spices, herbs",
+    "origin": "Middle Eastern"
+  },
+  {
+    "id": 10,
+    "name": "Frikadeller",
+    "ingredients": "minced meat, onions, breadcrumbs, eggs, milk",
+    "origin": "Denmark"
+  },
+  {
+    "id": 11,
+    "name": "Ratatouille",
+    "ingredients": "zucchini, eggplant, bell peppers, onions, tomatoes, herbs",
+    "origin": "France"
+  },
+  {
+    "id": 12,
+    "name": "Tagine",
+    "ingredients": "meat, vegetables, spices, dried fruits, nuts",
+    "origin": "Morocco"
+  },
+  {
+    "id": 13,
+    "name": "Schnitzel",
+    "ingredients": "pork or veal, breadcrumbs, eggs, flour",
+    "origin": "Austria"
+  }
+]
+
