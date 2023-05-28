@@ -1,0 +1,11 @@
+Carrots
+Broccoli
+<<<<<<< HEAD
+Green Beans
+=======
+Bell Peppers
+>>>>>>> feature/veggies
+Kale
+Turnips
+Asparagus
+Cauliflower
